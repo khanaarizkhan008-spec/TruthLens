@@ -10,13 +10,13 @@ Instead of trying to be an oracle that declares content real or fake, TruthLens 
 - The Ai would have analyzed and verified the information and also would have found the branch of questions that will arise
 
 ## **Technology Used**
-- Frontent
-    - Nextjs
-    - Shadcn
-    - skiper ui
-- Backend
-   - groq api-For AI LLM
-   - serp api - For Web Search
+- **Frontend**
+  - Next.js
+  - shadcn/ui
+  - Skiper UI
+- **Backend**
+  - Groq API – For AI/LLM
+  - SerpApi – For Web Search
 
 ## **System Architecture**
 
