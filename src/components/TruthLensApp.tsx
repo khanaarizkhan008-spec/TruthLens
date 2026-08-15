@@ -148,7 +148,14 @@ export function TruthLensApp() {
             <LoadingSequence />
           </motion.div>
         )}
-        <p className="text-center">Made with Love By Aariz and Team</p>
+        <motion.div
+          key="footer"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="space-y-8"
+        >
+          <p className="text-center">Made with Love By Aariz and Team</p>
+        </motion.div>
 
         {state === "success" && result && (
           <motion.div
