@@ -69,7 +69,7 @@ Step 5 — Results Dashboard (React frontend)
 ![Project Screenshot](public/proof/6.png)
 
     
-######Remember This is Only to help People judge and gather real time Information ,it is Not to Exploit / Discourage human judgement 
+## ## **Remember This is Only to help People judge and gather real time Information ,it is Not to Exploit / Discourage human judgement** 
 
 
 
