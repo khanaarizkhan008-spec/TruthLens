@@ -37,30 +37,30 @@ const verdictConfig = {
   "SUPPORTED": {
     icon: <CheckCircle2 className="w-5 h-5 text-green-600" />,
     badgeVariant: "success" as const,
-    bgClass: "bg-green-50/30",
+    bgClass: "bg-green-500",
     borderClass: "border-green-200/60",
-    textClass: "text-green-800"
+    textClass: "text-green-600"
   },
   "CONTRADICTED": {
     icon: <XCircle className="w-5 h-5 text-red-600" />,
     badgeVariant: "destructive" as const,
-    bgClass: "bg-red-50/30",
+    bgClass: "bg-red-500",
     borderClass: "border-red-200/60",
-    textClass: "text-red-800"
+    textClass: "text-red-600"
   },
   "MISLEADING": {
     icon: <AlertTriangle className="w-5 h-5 text-amber-600" />,
     badgeVariant: "warning" as const,
-    bgClass: "bg-amber-50/30",
+    bgClass: "bg-amber-500",
     borderClass: "border-amber-200/60",
-    textClass: "text-amber-800"
+    textClass: "text-amber-600"
   },
   "INSUFFICIENT EVIDENCE": {
     icon: <HelpCircle className="w-5 h-5 text-slate-500" />,
     badgeVariant: "secondary" as const,
-    bgClass: "bg-slate-50/50",
+    bgClass: "bg-slate-400",
     borderClass: "border-slate-200/60",
-    textClass: "text-slate-800"
+    textClass: "text-slate-500"
   }
 }
 
@@ -95,7 +95,7 @@ export function ClaimCard({ data, index }: { data: ClaimData, index: number }) {
       className="w-full"
     >
       <Card className={cn("overflow-hidden transition-all duration-300 border border-slate-200/70", isExpanded && "shadow-md border-slate-300")}>
-        <div className={cn("h-1 w-full transition-colors", config.bgClass, "border-b border-slate-100")} />
+        <div className={cn("h-1.5 w-full transition-colors", config.bgClass, "border-b border-slate-100")} />
         <CardContent className="p-6">
           <div 
             className="flex items-start justify-between gap-4 cursor-pointer"
