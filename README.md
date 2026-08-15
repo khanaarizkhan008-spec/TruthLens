@@ -59,7 +59,7 @@ Step 5 — Results Dashboard (React frontend)
 ![Project Screenshot](public/proof/4.png)
 
 # **Evidence's collected about the claim**
-![Project Screenshot](public/proof/4.png)
+![Project Screenshot](public/proof/7.png)
 
 
 # **Testing no 2 with False Information**
