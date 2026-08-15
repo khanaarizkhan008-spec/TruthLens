@@ -1,4 +1,9 @@
 import { TruthLensApp } from "@/components/TruthLensApp"
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'TruthLens',
+};
 
 export default function Home() {
   return (
