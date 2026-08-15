@@ -58,6 +58,10 @@ Step 5 — Results Dashboard (React frontend)
 # **Output For test1**
 ![Project Screenshot](public/proof/4.png)
 
+# **Evidence's collected about the claim**
+![Project Screenshot](public/proof/4.png)
+
+
 # **Testing no 2 with False Information**
 ![Project Screenshot](public/proof/5.png)
 
