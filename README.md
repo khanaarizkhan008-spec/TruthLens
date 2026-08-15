@@ -20,7 +20,8 @@ Instead of trying to be an oracle that declares content real or fake, TruthLens 
 
 ## **System Architecture**
 
-```User Input (text / URL / forwarded message)
+```
+User Input (text / URL / forwarded message)
         │
         ▼
 Step 1 — Content Ingestion
@@ -41,9 +42,31 @@ Step 4 — Verdict & Language Pattern Analysis (LLM)
         ▼
 Step 5 — Results Dashboard (React frontend)
    (claim-by-claim cards, source links, plain-language explanation,
-    "what to watch for" tip)```
+    "what to watch for" tip)
+
+
+````
+# **Home Page**
+  ![Project Screenshot](public/proof/1.png)
+
+# **Testing no 1 With True Information**
+![Project Screenshot](public/proof/2.png)
+
+# **Loading Page**
+![Project Screenshot](public/proof/3.png)
+
+# **Output For test1**
+![Project Screenshot](public/proof/4.png)
+
+# **Testing no 2 with False Information**
+![Project Screenshot](public/proof/5.png)
+
+# **Output for text 2**
+![Project Screenshot](public/proof/6.png)
 
     
+
+
 
 
 
