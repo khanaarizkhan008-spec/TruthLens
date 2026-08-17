@@ -58,6 +58,10 @@ Step 5 — Results Dashboard (React frontend)
 # **Output For test1**
 ![Project Screenshot](public/proof/4.png)
 
+# **Evidence's collected about the claim**
+![Project Screenshot](public/proof/7.png)
+
+
 # **Testing no 2 with False Information**
 ![Project Screenshot](public/proof/5.png)
 
@@ -65,7 +69,7 @@ Step 5 — Results Dashboard (React frontend)
 ![Project Screenshot](public/proof/6.png)
 
     
-
+##  **Remember This is Only to help People judge and gather real time Information ,it is Not to Exploit / Discourage human judgement** 
 
 
 
