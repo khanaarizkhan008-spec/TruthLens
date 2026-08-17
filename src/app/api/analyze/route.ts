@@ -112,7 +112,7 @@ async function searchWeb(query: string): Promise<SearchResult[]> {
   }
 }
 
-async function callGroq(messages: any[], model = "llama-3.3-70b-versatile") {
+async function callGroq(messages: any[], model = "openai/gpt-oss-20b") {
   if (!GROQ_API_KEY) throw new Error("Missing GROQ_API_KEY environment variable.")
 
   const response = await fetch(GROQ_API_URL, {
@@ -130,8 +130,10 @@ async function callGroq(messages: any[], model = "llama-3.3-70b-versatile") {
   })
 
   if (!response.ok) {
+    const errorText = await response.text().catch(() => "No error body")
+    console.error(`Groq API Error: Status ${response.status}. Body:`, errorText)
     if (response.status === 429) throw new Error("rate_limit")
-    throw new Error("api_error")
+    throw new Error(`api_error: Status ${response.status} - ${errorText}`)
   }
 
   const data = await response.json()
@@ -154,7 +156,7 @@ export async function POST(req: Request) {
       extracted = await callGroq([
         { role: "system", content: EXTRACT_PROMPT },
         { role: "user", content: `Text to analyze:\n\n${text}` }
-      ], "llama-3.1-8b-instant")
+      ], "openai/gpt-oss-20b")
     } catch (error: any) {
       if (error.message === "rate_limit") return NextResponse.json({ error: "Too many checks right now — try again in a minute." }, { status: 429 })
       throw error
@@ -194,7 +196,7 @@ Date: ${r.date || "N/A"}`).join("\n\n")
       parsedResult = await callGroq([
         { role: "system", content: ANALYZE_PROMPT },
         { role: "user", content: analysisInput }
-      ], "llama-3.3-70b-versatile")
+      ], "openai/gpt-oss-120b")
     } catch (error: any) {
       if (error.message === "rate_limit") return NextResponse.json({ error: "Too many checks right now — try again in a minute." }, { status: 429 })
       
@@ -203,7 +205,7 @@ Date: ${r.date || "N/A"}`).join("\n\n")
         parsedResult = await callGroq([
           { role: "system", content: ANALYZE_PROMPT },
           { role: "user", content: analysisInput }
-        ], "llama-3.3-70b-versatile")
+        ], "openai/gpt-oss-120b")
       } catch (retryError: any) {
         if (retryError.message === "rate_limit") {
            return NextResponse.json({ error: "Too many checks right now — try again in a minute." }, { status: 429 })
